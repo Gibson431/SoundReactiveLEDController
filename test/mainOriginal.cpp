@@ -8,7 +8,7 @@ int x = 0;
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(57600);
   FastLED.addLeds<WS2812, PIN_OUT, GRB>(leds, NUM_LEDS);
   FastLED.setBrightness(64);
   
