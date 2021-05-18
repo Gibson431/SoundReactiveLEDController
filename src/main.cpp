@@ -1,7 +1,7 @@
 #include <FastLED.h>
 #include <OneButton.h>
 
-#define NUM_LEDS 100
+#define NUM_LEDS 150
 #define LED_PIN 7
 #define BTN_PIN 3
 #define BOARD_LED 13  // NODEMCU board LED
@@ -29,7 +29,9 @@ void runComet() {
   Comet comet = Comet();
   bool addComet;
   while (isRunning) {
-    if (random(100) > 97) {
+    uint8_t rand = random(50);
+    // Serial.println(rand);
+    if (rand==42) {
       addComet = true;
     } else {
       addComet = false;
